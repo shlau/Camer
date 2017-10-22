@@ -175,4 +175,8 @@ public class User {
     public String getBnetID() {
         return new String(bnetID);
     }
+
+    public String getUsername() {
+        return new String(username);
+    }
 }
