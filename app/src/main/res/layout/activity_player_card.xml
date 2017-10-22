@@ -10,9 +10,6 @@
         android:id="@+id/mostPlayed1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mostPlayed"
@@ -23,30 +20,27 @@
         android:id="@+id/mostPlayed2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/mostPlayed1"
         app:layout_constraintTop_toBottomOf="@+id/mostPlayed"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@mipmap/ic_launcher_round"
+        app:layout_constraintRight_toLeftOf="@+id/mostPlayed3"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.323"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/mostPlayed3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/mostPlayed2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mostPlayed"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/ic_launcher_round"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <ImageView
         android:id="@+id/profilePic"
@@ -57,7 +51,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@mipmap/ic_launcher_round"
+        android:layout_marginStart="32dp" />
 
     <TextView
         android:id="@+id/playerID"
@@ -68,21 +63,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toRightOf="@+id/profilePic"
-        android:layout_marginLeft="0dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="102dp"
         android:layout_height="30dp"
-        android:layout_marginRight="0dp"
         android:layout_marginTop="14dp"
         android:text="Description"
         android:textSize="20sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Ranking"
-        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/Ranking"
         app:layout_constraintHorizontal_bias="0.0"
         android:layout_marginBottom="8dp"
@@ -95,9 +88,8 @@
         android:layout_height="30dp"
         android:text="Preferences"
         android:textSize="20sp"
-        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintTop_toBottomOf="@+id/profilePic" />
 
     <TextView
@@ -108,28 +100,27 @@
         android:textSize="20sp"
         android:layout_marginTop="37dp"
         app:layout_constraintTop_toBottomOf="@+id/pref1"
-        android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <ImageView
         android:id="@+id/pref2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toRightOf="@+id/pref1"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        app:layout_constraintRight_toLeftOf="@+id/pref3"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintTop_toBottomOf="@+id/preferences"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="0dp" />
 
     <ImageView
         android:id="@+id/pref3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintLeft_toRightOf="@+id/pref2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preferences"
         app:srcCompat="@mipmap/ic_launcher_round" />
@@ -138,28 +129,53 @@
         android:id="@+id/pref1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preferences"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/Ranking"
-        android:layout_width="72dp"
-        android:layout_height="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:text="Ranking"
         android:textSize="20sp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintTop_toBottomOf="@+id/playerID"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="@+id/playerID" />
+        app:layout_constraintLeft_toLeftOf="@+id/playerID"
+        app:layout_constraintTop_toBottomOf="@+id/playerID" />
 
     <ImageButton
         android:id="@+id/imageButton"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="0dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/ic_arrow_right"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/playerID"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="0dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_arrow_left"
-        tools:layout_editor_absoluteY="515dp"
-        tools:layout_editor_absoluteX="85dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/ic_holo_circle"
+        android:layout_marginStart="20dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/mostPlayed2"
+        android:layout_marginLeft="20dp" />
 </android.support.constraint.ConstraintLayout>
