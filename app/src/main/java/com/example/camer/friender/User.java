@@ -222,4 +222,8 @@ public class User {
         }
         return temp;
     }
+
+    public boolean checkPassword(String password) {
+        return password.equals(this.password);
+    }
 }

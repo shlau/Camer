@@ -29,7 +29,7 @@ public class FakeDataBase {
         return true;
     }
 
-    public boolean userExist(String username) {
+    private boolean userExist(String username) {
         if (db == null) {
             FakeDataBase.setup();
         }
@@ -55,7 +55,7 @@ public class FakeDataBase {
         return true;
     }
 
-    public boolean gameExist(String name) {
+    private boolean gameExist(String name) {
         if (db == null) {
             FakeDataBase.setup();
         }
@@ -66,6 +66,25 @@ public class FakeDataBase {
         }
 
         return false;
+    }
+
+    private User findUser(String username) {
+        for (int i = 0; i < listOfUsers.size(); i++) {
+            if (listOfUsers.get(i).getUsername().equals(username)) {
+                return listOfUsers.get(i);
+            }
+        }
+        return null;
+    }
+
+    public User login(String username, String password) {
+        if(userExist(username)) {
+            User u = findUser(username);
+            if(u.checkPassword(password)) {
+                return u;
+            }
+        }
+        return null;
     }
 
     public static void setup() {
