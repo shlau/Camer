@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBG">#323845</color>
+    <color name="colorLogInText">#4C5464</color>
 </resources>
