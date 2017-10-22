@@ -36,7 +36,10 @@ public class User {
     private ImageView profilePic;       // directing setting and returning reference to this, might need to change
 
     public static final int GALLERY_COUNT = 5;
-    private ImageView[] gallery = new ImageView[GALLERY_COUNT];
+    private ImageView[] gallery = new ImageView[GALLERY_COUNT]; // directing setting and returning reference to this, might need to change
+
+    private String[] favHero = new String[3];
+    private String[] mostPlayedHero = new String[3];
 
     private String discription;
 
@@ -130,6 +133,30 @@ public class User {
         this.bnetID = new String(s);
     }
 
+    public boolean setFavHero(String[] s) {
+        if(s.length != 3) {
+            return false;
+        }
+
+        favHero[0] = new String(s[0]);
+        favHero[1] = new String(s[1]);
+        favHero[2] = new String(s[2]);
+
+        return true;
+    }
+
+    public boolean setMostPlayedHero(String[] s) {
+        if(s.length != 3) {
+            return false;
+        }
+
+        mostPlayedHero[0] = new String(s[0]);
+        mostPlayedHero[1] = new String(s[1]);
+        mostPlayedHero[2] = new String(s[2]);
+
+        return true;
+    }
+
     /* GETTERS */
 
     public GregorianCalendar getLastLogin() {
@@ -178,5 +205,21 @@ public class User {
 
     public String getUsername() {
         return new String(username);
+    }
+
+    public String[] getFavHero() {
+        String[] temp = new String[3];
+        for(int i = 0; i < 3; i++) {
+            temp[i] = new String(favHero[i]);
+        }
+        return temp;
+    }
+
+    public String[] getMostPlayedHeroHero() {
+        String[] temp = new String[3];
+        for(int i = 0; i < 3; i++) {
+            temp[i] = new String(mostPlayedHero[i]);
+        }
+        return temp;
     }
 }
